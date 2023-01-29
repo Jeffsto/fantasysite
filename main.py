@@ -7,7 +7,7 @@ app.config['SECRET_KEY'] = datafile.storedkey
 
 @app.route("/")
 def index():
-    return "<p>Main Page<p>"
+    return "<p>Main<p>"
 
 if __name__ == "__main__":
     app.run(debug=True,host= '0.0.0.0',port=8888)
