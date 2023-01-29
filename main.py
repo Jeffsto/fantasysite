@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request
+import datafile
 
 
 app = Flask(__name__, static_folder='/static')
-app.config['SECRET_KEY'] = 'd460d5d24f58676ada118f6a'
+app.config['SECRET_KEY'] = datafile.storedkey
 
 @app.route("/")
 def index():
