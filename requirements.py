@@ -1,2 +1,4 @@
 #### Requirements without version specification ####
-flask
+Flask==2.2.2
+Flask-WTF
+sqlalchemy
