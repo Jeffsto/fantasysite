@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request
 import datafile
-
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__, static_folder='/static')
 app.config['SECRET_KEY'] = datafile.storedkey
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql://{datafile.mysqladmin}:{datafile.mysql}@{datafile.mysqlhost}:3306/{datafile.mysqldb}'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
