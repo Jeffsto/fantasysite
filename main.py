@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import datafile
-from flask_sqlalchemy import SQLAlchemy
+from Flask-SQLAlchemy import SQLAlchemy
 
 app = Flask(__name__, static_folder='/static')
 app.config['SECRET_KEY'] = datafile.storedkey
