@@ -5,7 +5,7 @@ from flask_login import UserMixin
 
 app = Flask(__name__, static_folder='/static')
 app.config['SECRET_KEY'] = datafile.storedkey
-app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql://{datafile.mysqladmin}:{datafile.mysqlpw}@{datafile.mysqlhost}:3306/{datafile.mysqldb}'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://{datafile.mysqladmin}:{datafile.mysqlpw}@{datafile.mysqlhost}:3306/{datafile.mysqldb}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
